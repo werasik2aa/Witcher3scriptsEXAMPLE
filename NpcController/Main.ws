@@ -38,7 +38,25 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
 // ((CActor)entity).SetBehaviorMimicVariable('gameplayMimicsMode', (float)(int)GMM_Death);
 // ((CActor)entity).SetBehaviorMimicVariable('gameplayMimicsMode', (float)(int)PGMM_Inventory);
 // ((CActor)entity).GetMovingAgentComponent().SetGameplayRelativeMoveSpeed(act); // 1 is for Walking, 2 jogging, 4 sprinting.
-// ((CActor)entity).ActivateBehaviorsSync(act);
+// ((CActor)entity).ActivateBehaviorsSync(act); array<name>
+// ((CNewNPC)vehicleEntity).GetHorseComponent(); WRONG?
+// riderGetServerSettings().sharedParams.GetHorse();
+// riderData = entity.GetRiderData();
+// vehicleEntity = riderData.sharedParams.GetHorse();
+// ((CActor)entity).MountActor(riderData, 'VehicleHorse', vehicleComponent);
+
+if(act == "sword_1handed" || act == "sword_2handed" || act == "TwoHanded" || act == "Bow")
+    {
+        inv = ((CActor)entity).GetInventory();
+        item = inv.GetItemFromSlot('r_weapon');
+	    if (inv.IsIdValid(item) && inv.ItemHasTag(item,'sword1h'))
+	        stupidArray.PushBack('sword_1handed');
+	    else {
+            item = inv.GetItemFromSlot('l_weapon');
+            if (inv.IsIdValid(item) && inv.ItemHasTag(item,'sword1h'))
+                stupidArray.PushBack('sword_1handed');
+        }
+    }
 
 //TYPEMOVE
 // MT_Walk
