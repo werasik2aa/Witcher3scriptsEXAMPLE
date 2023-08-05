@@ -28,3 +28,9 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
 // ((CActor)entity).TeleportWithRotation(pos, rot);
 // ((CActor)entity).ActionCancelAll();
 // ((CActor)entity).GetMovingAgentComponent().SetGameplayRelativeMoveSpeed(st); // 1 is for Walking, 2 jogging, 4 sprinting.
+// ((CActor)entity).SetCombatTarget(entity2);
+
+
+//TYPEMOVE
+// MT_Walk
+// MT_Run
