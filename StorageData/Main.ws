@@ -9,7 +9,7 @@ class MyData { //this like In Any Language Class For
   //... 
 }
 
-function GetServerSettings() : MyData //Instantiace the settings iF NOT EXIST AND get data
+function GetSettings() : MyData //Instantiace the settings iF NOT EXIST AND get data
 {
   var data: MyData;
   var player_input : CPlayerInput;
@@ -19,7 +19,7 @@ function GetServerSettings() : MyData //Instantiace the settings iF NOT EXIST AN
   return data;
 }
 
-function UpdateServerSettings(Data:MyData) //GETCLASS
+function UpdateSettings(Data:MyData) //GETCLASS
 {
   var player_input : CPlayerInput;
   player_input = thePlayer.GetInputHandler();
