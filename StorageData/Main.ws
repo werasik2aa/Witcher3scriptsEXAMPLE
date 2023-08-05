@@ -1,7 +1,12 @@
-class MyData {
+class MyData { //this like In Any Language Class For
   public var PLAYERENTITYSTATIC : W3PlayerWitcher;
   public var Name, Author, Version : String;
   public var DebugMode : bool;
+
+  //YOU CAN SET HERE ANY FUNCTON ALL YOU WANT
+  //public function
+  //private function
+  //... 
 }
 
 function GetServerSettings() : MyData //Instantiace the settings iF NOT EXIST AND get data
