@@ -28,3 +28,18 @@ state RunningState in MyBackgroundWorker {
         } 
     }
 }
+/// YOU CAN SET LIKE THAT
+state RunningState in MyBackgroundWorker {
+    //var here
+    event OnEnterState( prevStateName : name )
+    {
+        OnStart();
+    }
+    entry function OnStart() {
+        //SET VAR? BEFORE STAR
+        while( true ) {
+            //CALL HERE ANY FUNCTIONS
+            SleepOneFrame();
+        } 
+    }
+}
