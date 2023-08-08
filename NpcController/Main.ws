@@ -14,10 +14,17 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
       'q104_avallach_friendly_to_all',
       AGP_Default
     );
-    ((CActor)entity).GetMovingAgentComponent().SetGameplayMoveDirection(GetWitcherPlayer().GetHeading());
+    ((CActor)entity).GetMovingAgentComponent().SetGameplayMoveDirection(0);
     ((CActor)entity).ActionCancelAll();
     return entity;
 }
+
+// ((CActor)entity).GetMovingAgentComponent().SetGameplayMoveDirection(0);
+// GetWitcherPlayer().GetHeading() for head to you or VecHeading(positionP1 - positionP2) 
+// where: 
+       P1 - targetpos
+       P2 - entityPOS
+
 
 //ACTIONS (ASYNC = FINAL FUNCTIN) (Without sync = Latent function Example # ActionMoveTo(pos, moveType) #)
 // ((CActor)entity).ActionMoveToAsync(pos, moveType);
