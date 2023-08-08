@@ -26,7 +26,15 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
        #P1 - targetpos
        #P2 - entityPOS
 
-
+//KILL NPC 
+function kill()
+{
+  var entity: CNewNPC// DEFINE HERE ENTITY any way CNewNPC or CEntity or CActor...
+  //entity = your.var.from another scripts or ?
+  ((CActor)entity).SignalGameplayEvent( 'Death' );
+  ((CActor)entity).SetAlive(false);
+  ((CActor)entity).OnDeath( action );
+}
 //ACTIONS (ASYNC = FINAL FUNCTIN) (Without sync = Latent function Example # ActionMoveTo(pos, moveType) #)
 // ((CActor)entity).ActionMoveToAsync(pos, moveType);
 // ((CActor)entity).ActionMoveToWithHeadingAsync( pos, pos.Y, MT_Walk, 0.f, 0.1f );
