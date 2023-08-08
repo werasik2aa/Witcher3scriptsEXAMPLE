@@ -21,10 +21,10 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
 
 //=COMMENTS=//
 //((CActor)entity).GetMovingAgentComponent().SetGameplayMoveDirection(0);
-GetWitcherPlayer().GetHeading() for head to you or VecHeading(positionP1 - positionP2) 
-where: 
-       P1 - targetpos
-       P2 - entityPOS
+//GetWitcherPlayer().GetHeading() for head to you or VecHeading(positionP1 - positionP2) 
+#where: 
+       #P1 - targetpos
+       #P2 - entityPOS
 
 
 //ACTIONS (ASYNC = FINAL FUNCTIN) (Without sync = Latent function Example # ActionMoveTo(pos, moveType) #)
