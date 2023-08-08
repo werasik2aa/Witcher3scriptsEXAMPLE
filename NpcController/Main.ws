@@ -19,9 +19,10 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
     return entity;
 }
 
-// ((CActor)entity).GetMovingAgentComponent().SetGameplayMoveDirection(0);
-// GetWitcherPlayer().GetHeading() for head to you or VecHeading(positionP1 - positionP2) 
-// where: 
+
+((CActor)entity).GetMovingAgentComponent().SetGameplayMoveDirection(0);
+GetWitcherPlayer().GetHeading() for head to you or VecHeading(positionP1 - positionP2) 
+where: 
        P1 - targetpos
        P2 - entityPOS
 
@@ -51,20 +52,7 @@ function _SpawnIT(npc_templ:string, position:Vector, rotation:EulerAngles) : CEn
 // riderData = entity.GetRiderData();
 // vehicleEntity = riderData.sharedParams.GetHorse();
 // ((CActor)entity).MountActor(riderData, 'VehicleHorse', vehicleComponent);
-
-if(act == "sword_1handed" || act == "sword_2handed" || act == "TwoHanded" || act == "Bow")
-    {
-        inv = ((CActor)entity).GetInventory();
-        item = inv.GetItemFromSlot('r_weapon');
-	    if (inv.IsIdValid(item) && inv.ItemHasTag(item,'sword1h'))
-	        stupidArray.PushBack('sword_1handed');
-	    else {
-            item = inv.GetItemFromSlot('l_weapon');
-            if (inv.IsIdValid(item) && inv.ItemHasTag(item,'sword1h'))
-                stupidArray.PushBack('sword_1handed');
-        }
-    }
-
 //TYPEMOVE
 // MT_Walk
 // MT_Run
+//...
